@@ -1,6 +1,10 @@
 # Tic-Tac-Toe
+
+## Game Summary
 A game where a player needs to connect either Noughts [O] or Crosses [X] in a 3x3 grid, horizontally, vertically, or diagonally.
 
+
+## Game Logic
 The game grid logic is as follows.
 Users will altername adding positions on the grid:
 1. Player 1 keys in a position on the grid at position [1]

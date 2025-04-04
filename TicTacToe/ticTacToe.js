@@ -27,6 +27,23 @@ const main = async () => {
         9: 0,
     }
 
+    // gameBoard = [0,1,2,3,4,5,6,7,8]
+
+    // const empty = "_"
+    // const player1 = "X"
+    // const player2 = "O"
+
+    function markPosition(gridPositionKey) {
+        if (Object.values(gameBoard) == 0) {
+            return "_";
+        } else if (Object.values(gameBoard) == -1) {
+            return "X";
+        } else if (Object.values(gameBoard) == 1) {
+            return "O";
+        }          
+    }
+    
+    let displayGameBoard = console.log(`\n_${markPosition()}_|_${markPosition()}_|_${markPosition()}_`);console.log(`\n_${markPosition()}_|_${markPosition()}_|_${markPosition()}_`);console.log(`\n_${markPosition()}_|_${markPosition()}_|_${markPosition()}_\n`);
     
     let turn = -1;
 
@@ -45,6 +62,7 @@ const main = async () => {
         
         // if (!Object.values(gameBoard).indexOf(userInput)){
             
+    
         // }
 
         
@@ -83,13 +101,18 @@ const main = async () => {
             }
         }
         updateTurn(turn); // Check - ?
+
+        // winning Combo Object - how to update the value each time
+
+        // check game state for win - winning logic pseudocode
+        // for key in winningCombinationsObject:
+        //     value == -3 || value == +3:
+        //         winningfState = true
+        //     else:
+        //         return false // NOT A WIN - don't toggle the flag
     }
 
     rl.close();
-}
-
-function checkPosition() {
-
 }
 
 main();
@@ -102,4 +125,8 @@ function updateTurn(turn) {
     } else {
         throw 'Invalid turn value';
     }
+}
+
+function winningStates(gameBoard) {
+    // if 2 != 0 && 1 == 2 && 2 && 3 => win
 }
