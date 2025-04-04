@@ -1,25 +1,12 @@
 // Import dice roll for random number logic
 const {diceRoll} = require("../DiceRoll/diceRoll")
-
-const readline = require('readline');
-
-// Create an interface for input and output
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-// Anonymous call back function
-const askQuestion = (question) => {
-  return new Promise((resolve) => {
-    rl.question(question, (answer) => {
-      resolve(answer);
-    });
-  });
-};
+const {readline, rl, askQuestion} = require("../utilities/helper")
 
 // Main async function
 const main = async () => {
+    readline;
+    rl;
+    
     console.log(`Guess the number`);
 
     let roll = diceRoll(10)
