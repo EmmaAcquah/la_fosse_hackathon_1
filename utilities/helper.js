@@ -1,3 +1,4 @@
+// Instantiate the ability to read line
 const readline = require('readline');
 
 // Create an interface for input and output
